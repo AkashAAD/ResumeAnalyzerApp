@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "0b3180f8-3df9-4d06-a6d5-0de9778de0d7",
+		"name": "Resume Analyzer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1763095"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user[email]",
+							"value": "abc1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user[password]",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Resumes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/resumes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"resumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resume Matched Jobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/job_matches/resume/12121/match_jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"job_matches",
+						"resume",
+						"12121",
+						"match_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resume AI Feedback",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/ai_feedbacks/resume/123123/ai_feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"ai_feedbacks",
+						"resume",
+						"123123",
+						"ai_feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Jobs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Job",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/jobs/acd47b60-c176-4fba-9806-1ce79b3169dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"acd47b60-c176-4fba-9806-1ce79b3169dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "job[title]",
+							"value": "ROR Developer",
+							"type": "text"
+						},
+						{
+							"key": "job[company_name]",
+							"value": "Google",
+							"type": "text"
+						},
+						{
+							"key": "job[description]",
+							"value": "We are looking for a skilled Ruby on Rails Developer to join our team. The ideal candidate has experience building scalable web applications, working with databases, and implementing RESTful APIs. You will collaborate with cross-functional teams to design, develop, and maintain high-quality software solutions.\n\nResponsibilities:\nDevelop and maintain web applications using Ruby on Rails.\nDesign and optimize PostgreSQL/MySQL databases.\nImplement RESTful APIs and GraphQL for seamless data exchange.\nWrite clean, maintainable, and testable code following best practices.\nDebug, troubleshoot, and optimize performance bottlenecks.\nWork with frontend frameworks (React/Angular) to integrate APIs.\nEnsure security best practices in authentication, authorization, and data protection.\nCollaborate with product managers, designers, and other developers in an Agile environment.\nWrite and maintain technical documentation.\nImplement and maintain CI/CD pipelines for automated deployments.\nRequirements:\n✅ Proficiency in Ruby on Rails and strong understanding of MVC architecture.\n✅ Experience with PostgreSQL/MySQL and writing optimized queries.\n✅ Knowledge of RESTful APIs, GraphQL, and integrations.\n✅ Familiarity with JavaScript frameworks (React, Angular, or Vue.js) is a plus.\n✅ Understanding of background job processing (Sidekiq, Resque).\n✅ Experience with version control (Git, GitHub, GitLab).\n✅ Exposure to cloud platforms (AWS, Heroku, DigitalOcean) is a plus.\n✅ Strong problem-solving and debugging skills.\n✅ Experience with unit testing (RSpec, Minitest) and TDD is a plus.\n\nNice to Have:\nExperience with Docker and Kubernetes.\nKnowledge of ElasticSearch, Redis, and caching strategies.\nFamiliarity with Microservices and Event-driven architecture.\nPrior experience in FinTech, E-commerce, or SaaS platforms.\nBenefits:\n🎯 Competitive salary and performance-based bonuses.\n🏡 Flexible work schedule and remote work options.\n📚 Learning and development opportunities.\n💻 Latest tech stack and tools.\n🎉 Team outings, hackathons, and fun work culture.",
+							"type": "text"
+						},
+						{
+							"key": "job[location]",
+							"value": "Remote",
+							"type": "text"
+						},
+						{
+							"key": "job[job_type]",
+							"value": "full time",
+							"type": "text"
+						},
+						{
+							"key": "job[experience_required]",
+							"value": "5 years",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "job[title]",
+							"value": "ROR Developer1",
+							"type": "text"
+						},
+						{
+							"key": "job[company_name]",
+							"value": "Google",
+							"type": "text"
+						},
+						{
+							"key": "job[description]",
+							"value": "We are looking for a skilled Ruby on Rails Developer to join our team. The ideal candidate has experience building scalable web applications, working with databases, and implementing RESTful APIs. You will collaborate with cross-functional teams to design, develop, and maintain high-quality software solutions.\n\nResponsibilities:\nDevelop and maintain web applications using Ruby on Rails.\nDesign and optimize PostgreSQL/MySQL databases.\nImplement RESTful APIs and GraphQL for seamless data exchange.\nWrite clean, maintainable, and testable code following best practices.\nDebug, troubleshoot, and optimize performance bottlenecks.\nWork with frontend frameworks (React/Angular) to integrate APIs.\nEnsure security best practices in authentication, authorization, and data protection.\nCollaborate with product managers, designers, and other developers in an Agile environment.\nWrite and maintain technical documentation.\nImplement and maintain CI/CD pipelines for automated deployments.\nRequirements:\n✅ Proficiency in Ruby on Rails and strong understanding of MVC architecture.\n✅ Experience with PostgreSQL/MySQL and writing optimized queries.\n✅ Knowledge of RESTful APIs, GraphQL, and integrations.\n✅ Familiarity with JavaScript frameworks (React, Angular, or Vue.js) is a plus.\n✅ Understanding of background job processing (Sidekiq, Resque).\n✅ Experience with version control (Git, GitHub, GitLab).\n✅ Exposure to cloud platforms (AWS, Heroku, DigitalOcean) is a plus.\n✅ Strong problem-solving and debugging skills.\n✅ Experience with unit testing (RSpec, Minitest) and TDD is a plus.\n\nNice to Have:\nExperience with Docker and Kubernetes.\nKnowledge of ElasticSearch, Redis, and caching strategies.\nFamiliarity with Microservices and Event-driven architecture.\nPrior experience in FinTech, E-commerce, or SaaS platforms.\nBenefits:\n🎯 Competitive salary and performance-based bonuses.\n🏡 Flexible work schedule and remote work options.\n📚 Learning and development opportunities.\n💻 Latest tech stack and tools.\n🎉 Team outings, hackathons, and fun work culture.",
+							"type": "text"
+						},
+						{
+							"key": "job[location]",
+							"value": "Remote",
+							"type": "text"
+						},
+						{
+							"key": "job[job_type]",
+							"value": "full time",
+							"type": "text"
+						},
+						{
+							"key": "job[experience_required]",
+							"value": "5 years",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/jobs/acd47b60-c176-4fba-9806-1ce79b3169dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"acd47b60-c176-4fba-9806-1ce79b3169dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/jobs/12111sdd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"12111sdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Resume",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/resumes/1f8eb75b-e758-4351-8075-91870ec6042b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"resumes",
+						"1f8eb75b-e758-4351-8075-91870ec6042b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Resume",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "resume[file]",
+							"type": "file",
+							"src": "/home/walter-white/Downloads/Akash-Desbhratar-CV.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/resumes/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"resumes",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Resume",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/resumes/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"resumes",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmZiMjQ0NWQtNzY3MS00OTQ5LWIwMDAtNDJiNGNmZjg3NDJhIiwiZXhwIjoxNzQxOTc4NzU2fQ.LKdL73DPKZKU74dVR2HbrZtJHq2-cS5Qm7y_Ef4oWyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user[name]",
+							"value": "Akash",
+							"type": "text"
+						},
+						{
+							"key": "user[username]",
+							"value": "akashd",
+							"type": "text"
+						},
+						{
+							"key": "user[email]",
+							"value": "abc1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user[password]",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "user[password_confirmation]",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImFiYyIsImV4cCI6MTczNjI0MzM1N30.VbyIg6uOubyIqqPD-9tODZsyoo5h9uLkDYOHMCYkJT0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
