@@ -22,9 +22,7 @@ Rails.application.routes.draw do
       end
 
       resource :ai_feedbacks, only: [] do
-        collection do
-          get 'resume/:id/ai_feedback', to: 'show'
-        end
+        post 'resume/ai_feedback', to: 'show'
       end
     end
   end

@@ -37,3 +37,4 @@ gem 'jwt'
 gem 'httparty'
 
 gem "graphql", "~> 2.4"
+gem "pdf-reader"
