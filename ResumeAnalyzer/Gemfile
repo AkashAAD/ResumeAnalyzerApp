@@ -38,3 +38,4 @@ gem 'httparty'
 
 gem "graphql", "~> 2.4"
 gem "pdf-reader"
+gem 'rack-cors'

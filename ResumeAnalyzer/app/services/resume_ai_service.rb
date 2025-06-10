@@ -15,8 +15,6 @@ class ResumeAiService
       #{analysis_params[:job_description]}
     PROMPT
 
-    binding.pry
-
     response = HTTParty.post(
       base_url,
       headers: {

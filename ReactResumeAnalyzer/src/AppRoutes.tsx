@@ -4,7 +4,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import ResumeAnalyzer from "./Components/ResumeAnalyzer/ResumeAnalyzer";
 import Home from "./Components/Home/Home";
-import Header from "./Components/Layout/Header/Header";
+import Header from "./Components/Layout/Header";
 
 const AppRoutes = () => {
   return (
